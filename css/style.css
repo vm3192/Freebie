@@ -3088,8 +3088,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .header__slider .slick-dots li button::before {
-  display: inline-block;
-  height: 0;
   counter-increment: dot;
   content: "0" counter(dot);
   font-size: 18px;
