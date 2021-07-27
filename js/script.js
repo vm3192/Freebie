@@ -45,28 +45,37 @@ tabsButton.forEach(function (tab, index) {
   });
 });
 
-let rating = document.querySelector(".blockquote__rating"); //rating class
-let stars = rating.querySelectorAll("img"); //all stars in rating tag
+let ratings = document.querySelectorAll(".blockquote__rating"); //указать класс рейтингов
 
-function addStars(item, index) {
+for (let i = 0; i < ratings.length; i++) {
+  listenClick(ratings[i]);
+}
+
+//очищает текущий рейтинг от классов active
+function refresh(item) {
+	for ( let i = 0; i < item.length; i++) {
+		item[i].classList.remove('active');
+	}
+}
+
+//добавляет класс active всем звездам (до выбранной включительно)
+function addActive(item, index) {
   for (let i = 0; i <= index; i++) {
     item[i].classList.add("active");
   }
 }
 
-function refresh(item) {
-  for (let i = 0; i < item.length; i++) {
-		item[i].classList.remove("active");
-	}
-}
+//основная функция (работаем с текущим рейтингом)
+function listenClick(item) {
+  let currentRating = item.querySelectorAll("img"); //указать тег "звезды"
 
-stars.forEach(function (item, index) {
-
-  item.addEventListener("click", function () {
-		refresh(stars); //select all stars variable
-    addStars(stars, index); //select all stars variable and just index
+  currentRating.forEach(function (star, index) {
+    star.addEventListener("click", function () {
+      refresh(currentRating);
+      addActive(currentRating, index);
+    });
   });
-});
+}
 
 /*! WOW wow.js - v1.3.0 - 2016-10-04
 * https://wowjs.uk
