@@ -3790,6 +3790,77 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   opacity: 1;
 }
 
+.contact__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact__link {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  width: 50%;
+  padding: 70px 0 100px;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  -o-transition: transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  position: relative;
+}
+
+.contact__link--work {
+  background: #fbfbfb;
+  padding-left: calc(50% - 590px);
+}
+
+.contact__link--email {
+  background: #70bd59;
+  padding-right: calc(50% - 590px);
+}
+
+.contact__link--email .contact__link-title {
+  color: #fff;
+}
+
+.contact__link--email .contact__link-text {
+  color: #fff;
+}
+
+.contact__link:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 1;
+}
+
+.contact__link-inner {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.contact__link-icon {
+  margin-bottom: 15px;
+}
+
+.contact__link-title {
+  font-size: calc(18px + 6 * ((100vw - 320px) / 860));
+  line-height: 150%;
+  letter-spacing: 2.66667px;
+  color: #373737;
+  margin-bottom: 20px;
+}
+
+.contact__link-text {
+  font-weight: 300;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 860));
+  line-height: 135.71429%;
+  letter-spacing: 1.55556px;
+  color: #373737;
+  opacity: 0.8;
+}
+
 @media (min-width: 1180px) {
   .works__elem-name {
     font-size: 48px;
@@ -3935,6 +4006,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   .team__item-content {
     bottom: -90px;
+  }
+
+  .contact__link {
+    padding: 35px 0 50px;
   }
 
   body.lock {
