@@ -3802,11 +3802,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
           flex: 0 0 50%;
   width: 50%;
   padding: 70px 0 100px;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  -o-transition: transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   position: relative;
 }
 
@@ -3859,6 +3859,91 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   letter-spacing: 1.55556px;
   color: #373737;
   opacity: 0.8;
+}
+
+.footer__top {
+  background: #2e2e2e;
+  text-align: center;
+  padding: 80px 15px;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+.footer__text {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 146.15385%;
+  letter-spacing: 0.832px;
+  margin-bottom: 40px;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.footer__text a {
+  color: inherit;
+}
+
+.footer__text p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__links li {
+  margin: 0 10px;
+}
+
+.footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.footer__link:hover {
+  border: #fff;
+  background: #fff;
+}
+
+.footer__link:hover svg {
+  fill: #2E2E2E;
+  opacity: 1;
+}
+
+.footer__bottom {
+  background: #252525;
+  padding: 20px 15px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 146.15385%;
+  letter-spacing: 0.832px;
+  color: #fff;
+  opacity: 0.5;
 }
 
 @media (min-width: 1180px) {
